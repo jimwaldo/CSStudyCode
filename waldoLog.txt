@@ -1,0 +1,23 @@
+8/11/15
+
+Tracking down why the students listed in CS_Concentrators_Anon.csv and ConcentratorInfoAnon.csv are not the same.
+
+CS_Concentrators_Anon.csv was generated from CS Concentrators Fall 2005 to Present 2015-07-12.csv, using buildAnonConc.py.
+ConcentratorInfoAnon.csv was generated from ConcentratorInfoOriginal.csv, using anonConcInfo.py.
+
+CS Concentrators Fall... contains information for students from 2005 to the present; ConcentratorInfo contains students
+from 2009 to the present. Need to check that students in CS Concentrators but not in ConcentratorInfo are all students
+before 2009.
+
+All of the students who appear in CS Concentrators Fall... but not in ConcentatorInfo fall into one of two categories:
+    1) The student graduated prior to 2009, and so wasn't included in the range of students for ConcentratorsInfo
+    2) The student had a joint concentration, with the non-CS concentration listed first. These students were not included
+        in the query that created the ConcentratorInfo file.
+
+All of the students who appear in the ConcentratorInfo file but not the CS Concentrators file fall into one of two categories:
+    1) They were CS concentrators at one point, but changed their concentration to something else before graduation, or
+    2) The only information about the students are that they are CS concentrators; nothing else is supplied, including
+        the date that they declared their concentration. There are only three of these students; I would bet that they
+        are either FERPA blocked (in which case they probably shouldn't have shown up at all) or on leave or have some
+        other reason to not appear much.
+
