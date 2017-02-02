@@ -4,6 +4,26 @@ Take a .csv file containing information about students, the classes they have ta
 their grades, and produce a file with the same information that is de-identified in a most
 basic way, by having the names of the students deleted and the HUID for the student replaced
 by a randomly generated number.
+
+The full file that comes from the registrar contains the information in list form, as follows:
+
+    HUID
+    Name
+    Gender
+    Course Catalogue Number
+    End Date of Graduation
+    Program (Undergrad/Graduate)
+    Course Name
+    Academic Year
+    Term
+    Faculty Name
+    Grade
+    Student Primary Concentration
+    Student Secondary Concentration
+
+The file produced contains all this information with the HUID replaced by a random number (which is consistent for
+any particular student) and the name stripped out. Note that his is not k-anonymous in any meaningful way, but does
+protect against easy identification of the student by those using the data.
 """
 __author__ = 'waldo'
 
