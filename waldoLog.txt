@@ -1,3 +1,10 @@
+3/8/17
+Added buildAnonList14.py, which will anonymize the data set sent by the registrar covering academic years 14-15 and 15-16.
+This set is pretty much the same as the last one, with additional fields for a secondary instructor (which is not being
+transferred to the anonymized set) and fields for level of financial aid and percentage of total costs covered by
+financial aid. These last two fields are added to the end of each row. Random ids are generated once again, with students
+who had random ids generated for the earlier set getting the same random id this time around.
+
 8/11/15
 
 Tracking down why the students listed in CS_Concentrators_Anon.csv and ConcentratorInfoAnon.csv are not the same.
